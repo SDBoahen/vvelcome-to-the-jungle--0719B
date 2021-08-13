@@ -2,6 +2,12 @@ import './App.css';
 
 import Header from './Header';
 {/* <Header /> */}
+import SubHeader from './SubHeader';
+{/* <SubHeader /> */}
+
+import ButtonDELETE from './ButtonDELETE';
+{/* <ButtonDELETE /> */}
+
 
 import Example1HowToRender3DifferentWays from './Example1-HowToRender3DifferentWays';
 import Example2HowToRenderWithProps3DifferentWays from './Example2-HowToRenderWithProps3DifferentWays';
@@ -10,7 +16,17 @@ import Example2HowToRenderWithProps3DifferentWays from './Example2-HowToRenderWi
 
 
 function App() {
+  // Parent Component
+
   
+  // < App />
+  //   L>  <Header />
+  //     L>  < SubHeader />
+
+
+  // < App />
+  //   L>  < SubHeader />
+
 
 
 
@@ -23,6 +39,8 @@ function App() {
 
     }
     cLPlease()
+
+    const myName = "Sam"
 
 
   //////// Ideally - Vanilla JavaScript
@@ -39,13 +57,27 @@ function App() {
 
     return (<>
 
-            <Header 
+
+            <Header headerProp={myName}/>
+            {/* <ButtonDELETE /> */}
+
+
+            {/* <Header 
             
               headerProp={"CLICK-ME :)"}
 
               //X// onClick={console.log("yay! i got clicked ^.^")}
             
-            />
+            /> */}
+
+
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            {/* <SubHeader subHeaderProp={"Woobly"} /> */}
+            {/* <SubHeader subHeaderPropFromApp={"Woobly"} /> */}
+
 
             {/* <Example1HowToRender3DifferentWays /> */}
 

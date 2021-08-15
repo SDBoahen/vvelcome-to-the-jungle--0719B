@@ -12,6 +12,7 @@ import ButtonDELETE from './ButtonDELETE';
 import Example1HowToRender3DifferentWays from './Example1-HowToRender3DifferentWays';
 import Example2HowToRenderWithProps3DifferentWays from './Example2-HowToRenderWithProps3DifferentWays';
 
+import FecthingWithUseEffect from './FecthingWithUseEffect';
 
 
 
@@ -83,6 +84,8 @@ function App() {
 
             {/* < Example2HowToRenderWithProps3DifferentWays /> */}
 
+            < FecthingWithUseEffect />
+
     </>);
 
 
@@ -92,6 +95,8 @@ function App() {
 
 }
 export default App;
+
+
 
 
 

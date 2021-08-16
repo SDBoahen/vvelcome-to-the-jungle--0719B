@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import Critter from './Critter'
 
 
 
@@ -24,7 +25,7 @@ const FecthingWithUseEffect =()=>{
         }
 
 
-    useEffect( fetchCritters(), [] )
+    useEffect( fetchCritters, [] )
 
         // useEffect(  ()=>{ console.log("In useEffct") 
 
@@ -39,7 +40,21 @@ const FecthingWithUseEffect =()=>{
 
         // }, [] )
 
-        // //// json-server --watch db.json -p 8008 
+        //// json-server --watch db.json -p 8008 
+
+
+
+
+        const deleteACritter =(critterToDelete)=>{
+            console.log("Sorry", critterToDelete, " :(")
+
+            let crittersStaying = critters.filter( eachCritter => eachCritter.id != critterToDelete.id)
+                setCritters(crittersStaying)
+            
+        }
+        //X//
+        // const gettingCritterToDeleteInSameScope =()=>{
+        // }
 
 
 
@@ -50,7 +65,26 @@ const FecthingWithUseEffect =()=>{
         {
             critters.map(eachCritter =>{ console.log(eachCritter) 
             
-                return(<h4>{eachCritter.name}</h4>)
+                return(<>
+                        <Critter key={eachCritter.id}
+                            critterToRender={eachCritter}
+                            byebyeCritter={deleteACritter}
+                         />
+                       </>)
+                // return(<>
+                //     <h4>
+                //      {eachCritter.name}
+                //     </h4>
+                //     </>)
+
+                    //X//
+                    // return(<>
+                    //     <h4 
+                    //         onClick={deleteACritter}
+                    //         >
+                    //     {eachCritter.name}
+                    //     </h4>
+                    //     </>)
 
             })
         }
